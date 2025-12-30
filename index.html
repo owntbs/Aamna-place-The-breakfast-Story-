@@ -1,6 +1,43 @@
-index.html        ← main website page
-payment.html      ← payment system page
-upi_qr.png        ← UPI QR
-paytm_qr.png      ← Paytm QR
-README.md         ← sirf text (no HTML)
-<a href="payment.html">💳 Pay Now</a>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aamna Place – Payment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{font-family:Arial;background:#f7f7f7;padding:20px}
+    .box{max-width:400px;margin:auto;background:#fff;padding:20px;border-radius:10px}
+    h2{text-align:center}
+    img{width:100%;margin:10px 0}
+    input,button{width:100%;padding:10px;margin-top:10px}
+    button{background:green;color:#fff;border:none;font-size:16px}
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>✅ Order Received</h2>
+
+  <p><b>Payment Method:</b></p>
+  <p>UPI / Paytm</p>
+
+  <img src="IMG_0679.png" alt="UPI QR">
+  <img src="IMG_0680.png" alt="Paytm QR">
+
+  <input type="number" placeholder="Enter Amount (optional)">
+
+  <label>Upload Payment Screenshot</label>
+  <input type="file">
+
+  <button onclick="confirmOrder()">Confirm Payment</button>
+</div>
+
+<script>
+function confirmOrder(){
+  alert("✅ Payment received. Order confirmed!");
+  window.location.href =
+  "https://wa.me/917742149370?text=Payment%20done.%20Order%20Confirmed";
+}
+</script>
+
+</body>
+</html>
